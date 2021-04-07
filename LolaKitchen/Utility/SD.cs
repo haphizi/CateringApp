@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace LolaKitchen.Utility
 {
+    // comment
     public class SD
     {
         public const string DefaultFoodImage = "default_food.png";
