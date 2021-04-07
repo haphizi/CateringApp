@@ -1,0 +1,45 @@
+﻿@model IEnumerable<LolaKitchen.ViewModels.CategoryViewModel>
+
+
+
+
+
+<br />
+
+@*<div class="accordion" id="accordionExample">
+        @foreach (var item in Model)
+        {
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        @item.CategoryID | @item.CategoryName
+                    </button>
+
+                    @foreach (var items in Model)
+                    {
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+
+                                @Html.Partial("_IndexPartial", items.ChildCategories)
+                            </div>
+                        </div>
+                    }
+    </div>
+
+
+        }
+    </div>*@
+@foreach (var item in Model)
+{
+    <ul>
+        <li>
+            @item.CategoryID | @item.CategoryName
+            @{
+                Html.RenderPartial("_IndexPartial", item.ChildCategories);
+            }
+        </li>
+    </ul>
+}
+
+

@@ -1,0 +1,16 @@
+﻿@model int
+
+<td style="width:200px">
+    <a class="btn btn-warning text-dark" asp-action="Edit" asp-route-id="@Model">
+        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+    </a>
+
+
+    <a class="btn btn-warning text-dark" asp-action="Details" asp-route-id="@Model">
+        <i class="fa fa-list" aria-hidden="true"></i>
+    </a>
+
+    <a class="btn btn-warning text-dark" asp-action="Delete" asp-route-id="@Model">
+        <i class="fa fa-trash" aria-hidden="true"></i>
+    </a>
+</td>
